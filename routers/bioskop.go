@@ -11,4 +11,7 @@ func RegisterBioskopRoutes(router *gin.Engine) {
 
 	bioskop.POST("/", controllers.CreateBioskop)
 	bioskop.GET("/", controllers.GetAllBioskop)
+	bioskop.GET("/:id", controllers.GetBioskop)
+	bioskop.PUT("/:id", controllers.UpdateBioskop)
+	bioskop.DELETE("/:id", controllers.DeleteBioskop)
 }
